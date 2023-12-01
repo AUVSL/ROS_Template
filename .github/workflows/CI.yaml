@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       ROS_CI_DESKTOP: "`lsb_release -cs`"
-      ROS_DISTRO: # Add distro i.e. noetic
-      PACKAGE_NAME: # Add package name
-      PACKAGE_DIR: # Add where the requirements folder level will be, usally the same PACKAGE_NAME
+      ROS_DISTRO: melodic # Add distro i.e. noetic
+      PACKAGE_NAME: ROS_Template # Add package name
+      PACKAGE_DIR: ROS_Template # Add where the requirements folder level will be, usally the same PACKAGE_NAME
     steps:
       - uses: actions/checkout@v4
         with:
