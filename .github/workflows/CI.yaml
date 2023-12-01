@@ -42,6 +42,7 @@ jobs:
           rosdep install --from-paths src --ignore-src -r -s #dry run
           rosdep install --from-paths src --ignore-src -ry #dry run
       - name: Python Dependencies
+        if: ${{ hashFiles('~/catkin_ws/src/$PACKAGE_DIR/requirements.txt') != '' }}
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
           cd ~/catkin_ws/src/$PACKAGE_DIR
