@@ -70,6 +70,7 @@ jobs:
           cd ~/catkin_ws/src/$PACKAGE_DIR
           bloom-generate rosdebian --ros-distro $ROS_DISTRO
           fakeroot debian/rules binary
+          ls -a ~/catkin_ws/src/$PACKAGE_DIR/..
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
         with:
